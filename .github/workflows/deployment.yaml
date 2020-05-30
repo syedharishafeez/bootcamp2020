@@ -30,4 +30,4 @@ jobs:
     - name: Setup Surge
       run: npm install -g surge
     - name: Run Surge
-      run: surge ./ piaic_bootcamp2020.surge.sh
+      run: surge ./ piaic_bootcamp2020.surge.sh --token ${{SURGE_SECRET}}
