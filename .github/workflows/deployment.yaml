@@ -26,9 +26,7 @@ jobs:
       with:
         node-version: 12
         
-    - name: Build App
-      run: npm build
     - name: Setup Surge
       run: npm install -g surge
     - name: Run Surge
-      run: surge ./build online_piaic_bootcamp2020.surge.sh --token ${{secrets.SURGE_SECRET}}
+      run: surge ./ online_piaic_bootcamp2020.surge.sh --token ${{secrets.SURGE_SECRET}}
